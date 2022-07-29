@@ -4,8 +4,10 @@
 
 // I AM NOT DONE
 
+use std::convert::TryInto;
+
 fn main() {
-    let a = ???
+    let a: [&str; 100] = vec!["wow"; 100].try_into().expect("uh oh");
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");
